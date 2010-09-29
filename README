@@ -1,0 +1,9 @@
+Please do NOT distrubute. Feel free to compile and run any code.
+(http://www.github.com/joshmg)
+
+
+Readme Last Updated: September 29, 2010
+
+All libraries compiled and linked with with MSVS 2010 "Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86".
+
+"Key" is a personal utility designed to better understand and visualize the breakdown of expenses and credits for a KeyBank online account. Key aims to produce a graph/pie chart as well as catagorizing transaction descriptions in to more broad catagories.
