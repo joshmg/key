@@ -35,7 +35,7 @@ void draw_circle(float r, const point2d pos, const point3d& color, bool filled=t
   if (filled) glBegin(GL_TRIANGLE_FAN);
   else glBegin(GL_LINE_LOOP);
   for (int theta=0;theta<360;theta+=5) {
-    glVertex2f(pos.x + sin(theta*to_deg) * r, pos.y + cos(theta*to_deg) * r);
+    glVertex2f(pos.x + cos(theta*to_deg) * r, pos.y + sin(theta*to_deg) * r);
   }
   glEnd();
   glPopMatrix();
@@ -66,9 +66,10 @@ void display() {
   //draw_circle(100.0f, point2d(WIDTH/2.0, HEIGHT/2.0), point3d(0.3, 0.3, 0.3f));
 
   float offset = 0.0f;
+  point2d pos = point2d(120.0f, HEIGHT/2.0);
   map<float, string>::iterator pie_it = pie.begin();
   while (pie_it != pie.end()) {
-    draw_pie_piece(pie_it->first, 100.0f, point2d(WIDTH/2.0, HEIGHT/2.0), point3d(1.0*offset, 1.0*offset, 1.0f*offset), offset);
+    draw_pie_piece(pie_it->first, 100.0f, pos, point3d(1.0*offset, 1.0*offset, 1.0f*offset), offset);
     offset += pie_it->first;
     pie_it++;
   }
